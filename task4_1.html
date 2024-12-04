@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>functions in javascript</title>
+</head>
+
+<body>
+   <script>
+      // there are three of function:
+      //    1. default function (function no parameter and no return values)
+      //    2. function has return value only
+      //    3. function return value only
+      //    4. function has parameters with return value
+
+      // 1st function 
+      function fun1() {
+         // this statement for write message on browser screen 
+         document.write("Hello 1, fun 1 <br>");
+      }
+
+      function fun2(age) {
+         document.write("Your age is ", age, "<br>");
+      }
+
+      function fun3() {
+         return 42 + 23;
+      }
+
+      function fun4(a, b) {
+         return a + b;
+      }
+
+      fun1();
+
+      fun2(13);
+
+      document.write(fun3(), "<br>"); // this function is giving return value instead of storing it i just printed it 
+
+      document.write(fun4(42, 2)); // this function is giving return value instead of storing it i just printed it 
+
+   </script>
+</body>
+
+</html>

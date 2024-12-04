@@ -1,0 +1,33 @@
+What is Javascript? 
+   JavaScript is a scripting language that helps websites come to life. JavaScript is one of the most
+popular programming languages on both the front and back end and it helps Developers in creating web products that are interactive, engaging, and user-friendly. 
+   Where HTML and CSS give websites their style and structure, JavaScript makes websites programmable
+turning them into rich interactive applications. The JavaScript language is now used by nearly 98 percent of all web pages as a client-side programming language.
+
+Who created Javascript? 
+   "Brendan Eich" created JavaScript in 1995 while working as a developer at Netscape.
+
+History of Javascript :- 
+   Javascript had created in 1995, developed by "Brendan Eich" while working as a developer at Netscape.
+They created Javascript in just 10 days. At first time they named "Mocha" to Javascript. Then they renamed "Mocha" by name "Livescript". But "Livescript" that time this was not becoming popular. That was time Java was most popular programming language. So Netscape thought that we also have to naming it related to Java to make it popular.
+   Microsoft also had created JScript to compete with Javascript. So because of competetion, that both
+language was becoming browser dependent. When anyone created website in Javascript then it was running good only on Netscape Navigator(Browser of Netscape company). And if anyone who created website in JScript that was running good only on intenet explorer(Browser of Microsoft company).
+   Then Netscape Company made Javascript Standarized to all developers through the ECMA company. ECMA
+stands for "European Computer Manufacturer's Association". ECMA International is responsible for creating standards for many technologies.
+
+Frameworks that are based on Javascript :-
+   1. AngularJS
+   2. React.js
+   3. Vue.js
+   4. Ember.js
+   5. Meteor
+   6. Mithril
+   7. Node.js
+   8. Polymer
+   9. Aurelia
+   10. Backbone.js
+
+Latest version of Javascript :- The latest version of ECMAScript (ES), which is the standard for JavaScript, is ECMAScript 2024 (ES14). This version was finalized in June 2024 as part of the annual TC39 (ECMA's Technical Community) process.
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>operators</title>
+</head>
+
+<body>
+   <script>
+      // arithemetic operators : +, -, /, *, %, **, ++, --
+      console.log(32 + 4);
+      // same with other operators
+
+      // assignment operators : =, +=, -=, *=, /=, %=, **=
+      let a = 23;
+      let b = 3;
+      b += a;
+      console.log(a);
+      // same with other operators 
+
+      // comparison operator: ==, ===, !=, !==, >, <, >=, <=, ?:
+      let x = 23;
+      let y = "23";
+      console.log(x == y); // true, it only check content
+      console.log(x === y); // strict equal to false, it check datatypes with content also 
+      console.log(x != y) // false, it incorrect condition
+      console.log(x !== y); // true, it not checking datatypes of variables
+      let p = 524;
+      let q = 32;
+      console.log(p > q ? "hello" : "bye"); // ternary operator, hello, p is greater than q 
+
+
+      // logical operator : &&, ||, !
+      let m = "Aditya";
+      let n = "aditya";
+      let t = "Aditya";
+      // using && logical AND 
+      if (m == n && m == t)
+         console.log("Same");
+      else
+         console.log("Not same");
+      // using logical OR || 
+      if (m == n || m == t)
+         console.log("Same");
+      else
+         console.log("Not same");
+
+      // logical NOT ! 
+      if (m != n)
+         console.log("yes it is not same");
+
+      // bitwise operator: &, |, ~, ^, <<, >>, 
+      let i = 2;
+      let j = 0;
+
+      // bitwise AND mean multiplications 
+      console.log("bitwise and : ", j & i);
+      /*
+         010 = 2
+         *
+         000 = 0
+         ---------
+         000 = 0
+      */
+
+      // bitwise AND mean addition but 1 + 1 = 1 not 0 
+      console.log("bitwise or : ", j | i);
+      /*
+         010 = 2
+         +
+         000 = 0
+         ---------
+         010 = 2
+      */
+
+      // bitwise AND mean not 
+      console.log("bitwise not : ", ~i);
+      /*
+         0000 0010 (2) 
+         1111 1101 (-3)
+      */
+
+      // bitwise XOR mean addition but 1 + 1 = 0 not 1
+      console.log("bitwise xor : ", j ^ i);
+      /*
+         010 = 2
+         +'
+         000 = 0
+         ---------
+         010 = 2
+      */
+
+      // bitwise AND mean multiplications 
+      console.log("bitwise left shift : ", (j << i));
+      /*
+         its two times left shift 
+         so, 
+         2 << 0 = 
+         010 << 000
+         1st time = 100 << 000
+         2nd time = 000 000
+         so 000 000 = 0
+         answer is '0'
+      */
+
+      // bitwise AND mean multiplications 
+      console.log("bitwise right shift : ", j >> i);
+      /*
+         its two times right shift 
+         so, 
+         2 >> 0 = 
+         010 >> 000
+         1st time = 001 >> 000
+         2nd time = 000 000
+         so 000 000 = 0
+         answer is '0'
+      */
+
+   </script>
+</body>
+
+</html>
