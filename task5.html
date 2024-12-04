@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>interactive boxes in js</title>
+</head>
+
+<body>
+   <script>
+      // it is just popup window to show message 
+      alert("Hello")
+
+      // it takes input from user and by default it store values as string format 
+      let a = prompt("Enter name : ");
+      document.write(a, "<br>");
+
+      // we use parseInt for convert string into integer format and like that we can use parseFloat also for floating values 
+      let age = parseInt(prompt("Enter age : "));
+      document.write(age, "<br>");
+      age = parseFloat(prompt("Enter age again : "));
+      document.write(age, "<br>");
+
+      // this confirm is for confirming message are you sure, if ok then return true otherwise false 
+      let flag = confirm("Are above 18 ?");
+      if (flag)
+         document.write("You can vote<br>");
+      else
+         document.write("You can not vote<br>");
+   </script>
+</body>
+
+</html>
