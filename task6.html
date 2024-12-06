@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>template literals in js</title>
+</head>
+
+<body>
+   <script>
+      let a = 23;
+      let b = 342;
+      document.write("Value 1 is ", a, " Value 2 is ", b, " and addition of both is ", (a + b));
+      // in above statement you can see we are stuggling to write message using variable so facilitate it js providing feature called template literal where you can directly write variable in single row without any disturbance in coding 
+
+      // to use template literals use this `` quote special type of quotes 
+      // this quote is on keyboard at the left top most side 
+      // syntax = `Message : ${variable_name}`;
+      document.write(`<br><br> ${a} and ${b} is value and their addition is ${a + b}`);
+
+   </script>
+</body>
+
+</html>
