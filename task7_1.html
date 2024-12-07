@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task 7_1 - loop control in js</title>
+</head>
+
+<body>
+   <script>
+      // control statements:
+      // 1. iterative statement
+      // 2. loop control
+      // 3. decision statement
+
+      // today we are seeing iterative statements in js
+      // iterative statements are:
+      //    for Loop
+      //    while Loop
+      //    do -while Loop
+      //    for-in Loop
+      //    for-of Loop
+
+      let arr = [23, 52, 53, 25];
+
+      // for loop 
+      // arr.length is returning the length of array
+      document.write("For loop in js <br>");
+      for (let i = 0; i < arr.length; i++) {
+         document.write(arr[i], "<br>");
+      }
+
+      document.write("-----------------------------------------------------<br>");
+      // while loop 
+      let i = 0;
+      document.write("While loop in js <br>");
+      while (arr.length > i) {
+         document.write(arr[i], "<br>");
+         i++;
+      }
+
+      document.write("-----------------------------------------------------<br>");
+      // do_while loop 
+      i = 0;
+      document.write("do_while loop in js <br>");
+      do {
+         document.write(arr[i], "<br>");
+         i++;
+      } while (arr.length > i);
+
+      document.write("-----------------------------------------------------<br>");
+      // for of loop 
+      document.write("for of loop in js <br>");
+      for (let val of arr) {
+         document.write(val, "<br>");
+      }
+
+      document.write("-----------------------------------------------------<br>");
+      // for in loop 
+      document.write("for in loop in js <br>");
+      i = 0;
+      for (let key in arr) {
+         document.write(key, " : ", arr[key], "<br>");
+      }
+
+   </script>
+</body>
+
+</html>
