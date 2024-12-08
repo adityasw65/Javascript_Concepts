@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task7_2 - loop control statements in js</title>
+</head>
+
+<body>
+   <script>
+      // loop control statements : 
+      // break and continue 
+      let arr = [2, 4, 2, 5, 4, 23, 2, 52];
+      document.write("Original array : <br>")
+      for (let val of arr) {
+         document.write(val, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+      }
+
+      document.write("<br>Using break statement : ")
+      for (let val of arr) {
+         if (val == 5)
+            break;
+         document.write("<br>", val);
+      }
+
+      document.write("<br>Using continue statement : ")
+      for (let val of arr) {
+         if (val == 2)
+            continue;
+         document.write("<br>", val);
+      }
+   </script>
+</body>
+
+</html>
