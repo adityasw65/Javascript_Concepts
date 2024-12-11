@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task7_3 - decision statement in js</title>
+</head>
+
+<body>
+   <script>
+      // decision statements:
+      // 1. if
+      // 2. if_else
+      // 3. if_else_if ladder
+      // 4. switch 
+
+      let age1 = 34;
+      // simple if statement 
+      if (age1 > 18)
+         document.write("<br>You are eligible for vote");
+
+      let age2 = 17;
+      // if_else statement 
+      if (age2 > 18)
+         document.write("<br>You are eligible for vote");
+      else
+         document.write("<br>You are not eligible for vote");
+
+      // if else ladder 
+      let marks = parseInt(prompt("Enter percentage : "));
+      if (marks <= 100 && marks >= 0) {
+         if (marks >= 75)
+            document.write("<br>You are in Distinction category");
+         else if (marks > 60)
+            document.write("<br>You are in First class category");
+         else if (marks > 50)
+            document.write("<br>You are in Second class category");
+         else if (marks > 40)
+            document.write("<br>You are in Pass category");
+         else
+            document.write("<br>You are in Fail category");
+      }
+      else
+         document.write("<br>Entered percentage is out of range(0 to 100)");
+
+      let a = parseInt(prompt("Enter number from 1 to 7 : "));
+      switch (a) {
+         case 1:
+            document.write("<br>Monday");
+            break;
+         case 2:
+            document.write("<br>Tuesday");
+            break;
+         case 3:
+            document.write("<br>Wednesday");
+            break;
+         case 4:
+            document.write("<br>Thursday");
+            break;
+         case 5:
+            document.write("<br>Friday");
+            break;
+         case 6:
+            document.write("<br>Saturday");
+            break;
+         case 7:
+            document.write("<br>Sunday");
+            break;
+         default:
+            document.write("Invalid choice...!!!");
+            break;
+      }
+
+   </script>
+</body>
+
+</html>
