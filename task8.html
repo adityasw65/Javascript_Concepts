@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task 8 - value from input field in js</title>
+   <style>
+      input {
+         margin: 30px 80px;
+         font-size: 2rem;
+      }
+   </style>
+</head>
+
+<body>
+
+   <input type="text" name="user" id="user" placeholder="Enter username here" autocomplete="off">
+   <!-- here we have given event where when button click then function will call and work as per it define -->
+   <button type="button" onclick="sendMessage()">Submit Message!</button>
+   <p id="para"></p>
+   <h1 id="head"></h1>
+
+   <script>
+      // today we are seeing how to take value from input field and how to modify it 
+      function sendMessage() {
+         let a = document.getElementById("user").value;
+         console.log("Message from user : ", a);
+      }
+
+      // here i have give tag in paragraph tag using innerHTML property 
+      document.getElementById("para").innerHTML = "<h2>America<h2>";
+
+      // you can give text in any tag also using innerText property 
+      document.getElementById("head").innerText = "LinkedIn People!";
+   </script>
+</body>
+
+</html>
