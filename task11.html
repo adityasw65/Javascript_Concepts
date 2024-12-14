@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>events in html</title>
+   <style>
+      input {
+         font-size: 2rem;
+      }
+
+      select {
+         font-size: 2rem;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- events :-  -->
+   <!-- onclick, onmousedown, onmouseup, onmouseover, onmouseout, onchange, onfocus, onblur  -->
+   <input type="text" name="user" id="user" placeholder="Username" autocomplete="off" onmouseout="mouseOut()"><br><br>
+
+   <input type="text" name="name" id="name" placeholder="Name here" autocomplete="off" onblur="mouseBlur()"><br><br><br>
+
+   <!-- here this.value is sending selected country name and i called function when country change at event onchange  -->
+   <select name="country" id="country" onchange="countryChange(this.value)">
+      <option value="select" enabled>Select country</option>
+      <option value="india">India</option>
+      <option value="us">America</option>
+      <option value="uk">England</option>
+   </select>
+
+   <script>
+      function clicked() {
+         alert("You clicked on input field");
+      }
+      function mouseDown() {
+         alert("Mouse down");
+      }
+      function mouseUp() {
+         alert("Mouse up");
+      }
+      function mouseOver() {
+         alert("Mouse over");
+      }
+      function mouseOut() {
+         alert("Mouse out");
+      }
+      function mouseFocus() {
+         alert("Mouse focused here");
+      }
+      function mouseBlur() {
+         alert("Mouse blur here");
+      }
+      function countryChange(name) {
+         alert(`You have selected ${name} country`);
+      }
+   </script>
+</body>
+
+</html>
