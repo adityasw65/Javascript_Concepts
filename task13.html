@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>keyboard events in js</title>
+   <style>
+      input {
+         font-size: 2rem;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- 
+      differece between all of them is
+      keyPress - you pressed the key and released that time this event will occur
+      keyDown - you pressed the key but not released that time this event will occur
+      keyUp - you pressed the key and release, when you release it that time this event will occur 
+   -->
+
+   <input type="text" name="name" id="name" placeholder="Enter Your First name" onkeypress="keyPress()"><br><br>
+   <input type="text" name="name" id="name" placeholder="Enter Your Middle name" onkeydown="keyDown()"><br><br>
+   <input type="text" name="name" id="name" placeholder="Enter Your Last name" onkeyup="keyUp()">
+
+   <script>
+      function keyPress() {
+         alert("Key pressed");
+      }
+      function keyDown() {
+         alert("Key down");
+      }
+      function keyUp() {
+         alert("Key up");
+      }
+   </script>
+</body>
+
+</html>
