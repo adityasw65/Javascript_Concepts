@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array creation and functions in js</title>
+</head>
+
+<body>
+	<script>
+		// syntax - let variable_name = [value1, value2, ...valuen];
+		let arr = [23, 52, 52, 21];
+		console.log(arr);
+
+		let arr1 = new Array();
+		arr1 = [24, 5, 52, 12, 55];
+		console.log(arr1);
+
+
+
+		// this method not return any value 
+		// this method used to just perform the operation on array items 
+		// arrayObject.forEach((value, index, arrayname) => {
+		// 	code
+		// });
+		console.log("\nArray using forEach : ")
+		arr.forEach((item) => {
+			console.log(item * 2);
+		});
+
+
+
+		// this method returns new array
+		// this method used to perform the operations on array items and return new array 
+		// arrayObject.map((value, index, arrayname) => {
+		// 	code
+		// });
+		console.log("\nArray using map : ")
+		let newArr = arr.map((item) => {
+			return (item * 3);
+		});
+		console.log(newArr);
+
+
+
+		// this method returns new array
+		// this used to filter out values or data from array 
+		// arrayObject.filter((value, index, arrayname) => {
+		// 	code
+		// });
+		console.log("\nArray using filter : ")
+		let newArr1 = arr.filter((item) => {
+			return (item % 2 == 0);
+		});
+		console.log("Even numbers : ", newArr1);
+
+
+
+		// this method returns single value
+		// this used to reduce perform operation on data of array and return single value
+		// arrayObject.reduce((prev_value, next_value) => {
+		// 	code
+		// });
+		// here prev_value denotes the first number and next_value for second number then next value denotes third number like till the end of array values 
+		console.log("\nArray using reduce : ")
+		let sum = arr.reduce((prev, next) => {
+			return (prev + next);
+		});
+		console.log("Summation of array elements : ", sum);
+	</script>
+</body>
+
+</html>
