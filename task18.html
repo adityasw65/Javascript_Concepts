@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>math functions in js</title>
+</head>
+
+<body>
+   <script>
+
+      // This is value will take next big number
+      console.log("\n\nUsing ceil function : ", Math.ceil(24.243));
+
+      // This is value will take small number
+      console.log("\n\nUsing floor function : ", Math.floor(24.243));
+
+      // this will take as per number if number is 23.5 or greater than .5 number then next big number if 23.4 then small number 
+      console.log("\n\nUsing round function : ", Math.round(24.243));
+      console.log("\n\nUsing round function : ", Math.round(24.5));
+
+      // this function create random number 
+      let randomNumber = Math.random();
+      console.log("\n\nUsing random function : ", randomNumber);
+      // if you want this random number in 3 digit and without decimal then multiply it by 1000 and parse it into integer 
+      console.log("\nRandom number with 3 digit : ", parseInt(Math.random() * 1000));
+
+      // sqrt function in js 
+      // this find out square root of number
+      console.log("\n\nsquare root of number: ", Math.sqrt(4));
+
+      // if we want any negative make it in positive number then 
+      console.log("\n\nNegative to Positive : ", Math.abs(-32));
+
+      // default value of pi also we can print here 
+      console.log("\n\nPI value : ", Math.PI);
+
+   </script>
+</body>
+
+</html>

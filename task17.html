@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>array destructuring, spread and rest operator in js</title>
+</head>
+
+<body>
+   <script>
+
+      // spread and rest operator both are representing by ... (three dots)
+
+      console.log("\n\nspread operator with array :");
+      let arr = [23, 42, 5, 87, 99, 1023];
+      console.log(arr);
+
+      // array destructuring in js 
+      let [a, b, c, d] = arr;
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(d);
+
+      // spread and rest operator are looking same but 
+      // we can merge two array in single array using spread operator 
+      console.log("\n\nspread operator with object :");
+      let arr1 = [24, 5, 55, 11];
+      let arr2 = [...arr, ...arr1];
+      console.log(arr2);
+
+      // we can merge two object also 
+      let obj1 = {
+         name: "Aditya",
+         gender: "male"
+      };
+      let obj2 = {
+         name: "swapnil",
+         gender: "male",
+         age: 23
+      };
+      let obj3 = { ...obj1, ...obj2 };
+      // here data will overwrite because same key present in both objects
+      console.log(obj3);
+
+
+
+      // we can divide string into character 
+      console.log("\n\nspread operator with string :");
+      let str = "Aditya Waghmare";
+      let stringArr = [...str];
+      console.log(stringArr);
+
+
+
+      // rest operators 
+      // this rest operator take values and make one array 
+      // you cannot take another parameter after rest operator variable 
+      console.log("\n\nUsing rest operator : ");
+      function fun(a, b, ...args) {
+         console.log(a);
+         console.log(b);
+         console.log(args);
+      }
+      fun("Aditya", 42, 55, "Sumit", 41);
+
+   </script>
+</body>
+
+</html>
