@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>array methods in js</title>
+</head>
+
+<body>
+   <script>
+      let arr = [23, 42, 55, 62, 13, 89, 203, 4023, 42, 5992, 1240, 42];
+      console.log(arr);
+
+      // length of array 
+      console.log("Length of array : ", arr.length);
+
+      // attaching or concatenating two arrays 
+      let arr1 = [323, "iphone", "samsung", "redmi", "realme", "one plus", "nothing"];
+      console.log("\nConcatenating two arrays : ", arr.concat(arr1));
+
+      // index of particular element in array 
+      console.log("index of 'samsung' : ", arr1.indexOf("samsung"));
+
+      // this join method return string and based on parameter it attach every word with it and make single string 
+      let str = arr1.join("/");
+      console.log("join : ", str);
+
+      // pop function delete last element from array 
+      console.log("\npop element : ", arr1.pop());
+      console.log(arr1);
+
+      // push method add element at end of array 
+      arr1.push("windows");
+      console.log("After adding 'window' element : ", arr1);
+
+      // shift method - delete element from front
+      arr1.shift();
+      console.log("after deleting element from front : ", arr1);
+
+      // unshift method - add element from front 
+      arr1.unshift(983424);
+      console.log("after adding element '983424' from front : ", arr1);
+
+      // slicing means sub array - this slice method not affect on original array  
+      console.log("\n\nSlicing : ", arr1.slice(0, 4));
+      console.log("original array : ", arr1);
+
+      // splice means sub array - this splice method affect on original array
+      console.log("\n\nSplicing : ", arr1.splice(0, 4));
+      console.log("original array : ", arr1);
+
+   </script>
+</body>
+
+</html>

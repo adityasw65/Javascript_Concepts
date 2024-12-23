@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>String methods in js</title>
+</head>
+
+<body>
+   <script>
+
+      document.write("Today We are looking for String functions ")
+      let str = "Aditya Waghmare";
+
+      // returns length of string means character present in string 
+      console.log("String length : ", str.length);
+      let str1 = " Computer Engineer";
+      console.log("Concatnated string : ", str.concat(str1));
+
+      // this function returns index of particular character 
+      console.log("index of 'i' : ", str.indexOf("i"));
+
+      // indexOf() ---------> this way
+      // A d i t y a _ W a g h  m  a  r  e
+      // 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14  =  15
+      //                    this way <----------- lastIndexOf() still index same
+
+      // this function returns index of i and it is counting from last and still it gives same index number, because it will not change index of character 
+      console.log("index of 'i' : ", str.lastIndexOf('i'));
+
+      // this function slice string based on index numbers, it exclude last index
+      console.log("Slicing string : ", str.slice(0, 11));
+
+      // this split function returns array, and split based on given parameter 
+      let str2 = str.split("");
+      console.log(str2); // here this returns each character splitted in array
+      let str3 = str.split(" ");
+      console.log(str3); // here this return two words only
+
+      // this returns substring 
+      console.log("Substring : ", str.substring(11, 0));
+
+      /*
+      difference between slice and substring:
+      JavaScript substring() :
+         1. If start > stop, then the function swaps both arguments.
+         2. If any argument is negative or is NaN, it is treated as 0.
+
+      JavaScript slice() :
+         1. If start > stop, This function will return an empty string. ("")
+         2. If the start is negative, It sets char from the end of the string, like substr().
+         3. If stop is negative, It sets stop = string.length – Math.abs(stop) (original value)
+      */
+
+      // trim method - this function remove spaces from start and from end and not change original string 
+      let str4 = "         The World is Yours!       ";
+      console.log("\nWithout trim function : \n", str4);
+      console.log("Trim function : ", str4.trim());
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>date function in js</title>
+</head>
+
+<body>
+   <script>
+
+      // we have to create object of Date 
+      let date = new Date();
+      console.log(date)
+
+      // this will give us current date 
+      console.log("Date : ", date.getDate());
+
+      // this will give us current day 
+      console.log("Day : ", date.getDay(), " here days are coming with integer which means (sun-sat) respective to (0-6)");
+
+      // this will returns month 
+      console.log("Months : ", date.getMonth(), " months are also getting in integer which means (jan - dec) respective to (0-11)");
+
+      // this will return year 
+      console.log("Current Year : ", date.getFullYear());
+
+      // this returns hours 
+      console.log("Hours : ", date.getHours());
+
+      // this returns Minutes
+      console.log("Minutes : ", date.getMinutes());
+
+      // this returns seconds
+      console.log("Seconds : ", date.getSeconds());
+
+      // this will returns only date and time 
+      console.log("Time : ", date.toLocaleString());
+
+   </script>
+</body>
+
+</html>
