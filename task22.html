@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Selecting elements in js</title>
+   <style>
+      .para1 {
+         background-color: lightcoral;
+         padding: 10px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <h1 id="head">Aditya Waghmare</h1>
+   <p class="para1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque eum facilis hic! Amet id impedit ipsum,
+      perspiciatis quia quibusdam quisquam voluptatem? Adipisci, aliquam aspernatur, at beatae culpa doloremque
+      eveniet hic laborum minima, nemo ratione reiciendis unde voluptates. Beatae cumque doloribus modi perspiciatis
+      quas. Aliquam corporis cumque deleniti dicta dolor excepturi expedita facere impedit in nihil, nostrum nulla
+      numquam quia ratione ullam? Ad alias architecto assumenda at autem blanditiis debitis dolor doloremque dolores
+      enim eum fugit harum hic impedit ipsa ipsam magni minus nobis odio odit officia pariatur, provident quas
+      quisquam recusandae repellendus reprehenderit sunt, suscipit ut velit vero voluptates?
+   </p>
+   <p class="para1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloremque eum facilis hic! Amet id impedit ipsum,
+      perspiciatis quia quibusdam quisquam voluptatem? Adipisci, aliquam aspernatur, at beatae culpa doloremque
+      eveniet hic laborum minima, nemo ratione reiciendis unde voluptates. Beatae cumque doloribus modi perspiciatis
+      quas. Aliquam corporis cumque deleniti dicta dolor excepturi expedita facere impedit in nihil, nostrum nulla
+      numquam quia ratione ullam? Ad alias architecto assumenda at autem blanditiis debitis dolor doloremque dolores
+      enim eum fugit harum hic impedit ipsa ipsam magni minus nobis odio odit officia pariatur, provident quas
+      quisquam recusandae repellendus reprehenderit sunt, suscipit ut velit vero voluptates?
+   </p>
+
+   <input type="text" name="first" id="first" placeholder="Enter first name"><br><br>
+   <input type="text" name="last" id="last" placeholder="Enter last name">
+   <input type="button" value="Send Data !" onclick="sendData()">
+
+   <script>
+
+      let heading = document.getElementById("head");
+      heading.style.color = "lightblue";
+      heading.style.textShadow = "2.5px 2.5px 2px orange";
+      heading.style.fontFamily = "Calibri";
+      heading.style.webkitTextStroke = "0.8px blue";
+      heading.style.letterSpacing = "3px";
+
+
+      // selecting elements by class names 
+      // this para1 take array of both paragraphs, because class keep group of elements
+      // first in css I have given the background color lightcoral and then here i gave the color using array
+      let para = document.getElementsByClassName("para1");
+      let colorArr = ["lightblue", "lightyellow"];
+      for (let i = 0; i < para.length; i++) {
+         para[i].style.backgroundColor = colorArr[i];
+         console.log("Paragraph : ", i, para[i]);
+      }
+
+
+      // now selecting elements by tag names 
+      // this getElementsByTagName also send array 
+      function sendData() {
+         let inputField = document.getElementsByTagName("input");
+         for (let i = 0; i < inputField.length; i++) {
+            let temp = inputField[i].value;
+            console.log(temp);
+         }
+      }
+
+   </script>
+</body>
+
+</html>

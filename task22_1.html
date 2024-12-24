@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>querySelector in js</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+      input[type='button'] {
+         padding: 10px 20px;
+         font-size: 1.2rem;
+      }
+
+      #moon {
+         font-size: 2rem;
+      }
+
+      #sun {
+         font-size: 2rem;
+      }
+
+      .mode {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         gap: 20px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="mode">
+      <i class="fa-regular fa-moon" id="moon"></i>
+      <i class="fa-regular fa-sun" id="sun"></i>
+   </div>
+
+   <h1 id="career">Hello Javascript World!</h1>
+   <input type="button" value="Send me" onclick="sendMe()">
+
+   <ul>
+      <li class="list">Computer Engineering</li>
+      <li class="list">Mechanical Engineering</li>
+      <li class="list">Civil Engineering</li>
+      <li class="list">Chemical Engineering</li>
+   </ul>
+   <input type="button" value="Send Department" onclick="sendDept()">
+
+   <script>
+
+      /*
+      difference between querySelector and getElementById
+         1. getElementById() only works with ID attributes, while querySelector() can work with any CSS selector.
+         2. Additionally, getElementById() is faster than querySelector() because it only needs to search for one element, whereas querySelector() may need to search for multiple elements before returning the first match.
+      */
+
+      // syntax for querySelector
+      // document.querySelector("#idName/.className/tagName");
+      // this is another way of writing function in js
+      const sendMe = () => {
+         let a = document.querySelector("#career").innerText; // innerText send text written in tags
+         console.log(a);
+      }
+
+
+      /*
+      difference between querySelectorAll and getElementsByClassName
+         1. they both returns array 
+         2. querySelectorAll work with any tag, id or class but getElementsByClassName only work with class name 
+      */
+      const sendDept = () => {
+         let deptList = document.querySelectorAll(".list");
+         for (let i = 0; i < deptList.length; i++) {
+            console.log(deptList[i].innerText);
+         }
+      }
+
+
+      let moon = document.querySelector("#moon");
+      moon.addEventListener("click", () => {
+         document.body.style.backgroundColor = "black";
+         document.body.style.color = "white";
+         document.body.style.transition = "all .5s 0s linear";
+      });
+      let sun = document.querySelector("#sun");
+      sun.addEventListener("click", () => {
+         document.body.style.backgroundColor = "white";
+         document.body.style.color = "black";
+         document.body.style.transition = "all .5s 0s linear";
+      });
+
+   </script>
+</body>
+
+</html>
