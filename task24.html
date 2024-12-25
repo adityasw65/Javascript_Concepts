@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>create node and elements and add it into elements or page using Javascript</title>
+   <style>
+      #parent {
+         padding: 0px 10px;
+         font-family: source code pro;
+         border: 2px solid black;
+      }
+
+      h4 {
+         font-size: 1.2rem;
+      }
+   </style>
+</head>
+
+<body>
+
+   <p id="parent">
+
+   </p>
+
+   <script>
+
+      /*
+      important method in javascript : 
+         prepend() - add elements at first inside the div 
+         append() - add element at last inside the div and also used to add text in element
+         appendChild() - this is only used to add text in element
+         createElement() - used to create element
+         createTextNode() - used to create text for any element using this method
+         insertBefore() - inserting element before any element and require two parameter first one is new element and second is old element means element which insert before who
+         before() - attach element at first outside the div 
+         after() - attach element at last outside the div
+         replaceChild() - this is used to replace any element and it requires two parameter first one is new node and second is old node
+         removeChild() - this method used to remove the child and parentEle.removeChild(removingEle)
+      */
+
+      // this createElement method used to create tags 
+      let a = document.createElement("h4");
+
+      // this createTextNode method use to create text inside the tags 
+      let b = document.createTextNode("LinkedIn Platform for Fresher as well as Experienced People - append");
+
+      // this appendChild method only append / add text inside the tags 
+      a.appendChild(b);
+
+      let parent = document.getElementById("parent");
+      // this append method used to add or append tags and text too. Also this method append node inside the parent node but at end not at first 
+      parent.append(a);
+
+
+      let para = document.createElement("p");
+      para.appendChild(document.createTextNode("This is paragraph prepend"));
+      // this method will add para element at first inside the parent 
+      parent.prepend(para);
+
+      let insertBeforeEle = document.createElement("p");
+      insertBeforeEle.appendChild(document.createTextNode("insert Before method"))
+      // this method takes two parameters first one new element and second is old element means element insert before which element 
+      parent.insertBefore(insertBeforeEle, a);
+
+
+      let afterEle = document.createElement("a");
+      afterEle.appendChild(document.createTextNode("Hello Everyone After"));
+      // this method attach element at end and outside the div 
+      parent.after(afterEle);
+
+      let beforeEle = document.createElement("a");
+      beforeEle.appendChild(document.createTextNode("Hello Everyone Before"));
+      // this method add at first and outside the div 
+      parent.before(beforeEle);
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>setTimeout and setInterval methods in js</title>
+   <style>
+      button {
+         padding: 10px 20px;
+         font-size: 1.2rem;
+      }
+   </style>
+</head>
+
+<body>
+
+   <button type="button" onclick="setTimeoutExample()">Set Timeout</button>
+   <button type="button" onclick="setIntervalExample()">Set Interval</button>
+   <button type="button" onclick="clearIntervalExample()">Clear Interval</button>
+
+   <script>
+
+      /*
+      difference between setTimeout and setInterval 
+            setTimeout executes the function after time out of given time but at once and 
+            setInterval executes the function after time out of given time but it executes it again and again(infinity) unless and until you do not close the browser.
+      */
+
+      let time1;
+      const setTimeoutExample = () => {
+         alert("Wait for 3 sec");
+         setTimeout(() => {
+            console.log("Greetings from Aditya...");
+         }, 3000);
+      }
+
+      const setIntervalExample = () => {
+         time1 = setInterval(() => {
+            console.log("Wish you Happy Christmas !!!");
+         }, 1000);
+      }
+
+      // to stop interval we use clearInterval() function and pass variable of interval store and same with timeout use clearTimeout() and pass variable of timeout store
+      const clearIntervalExample = () => {
+         clearInterval(time1);
+      }
+
+   </script>
+</body>
+
+</html>
