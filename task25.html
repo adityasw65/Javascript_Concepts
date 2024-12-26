@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>api calling in js</title>
+   <style>
+      button {
+         padding: 10px;
+         font-size: 1.2rem;
+      }
+   </style>
+</head>
+
+<body>
+
+   <button type="button" onclick="callApi()">API call using XMLHttpRequest</button>
+
+
+   <script>
+      /*
+      there four types of api handling methods:
+         1. using XMLHttpRequest
+         2. using fetch() method
+         3. using axios
+         4. using jQuery ajax
+      */
+
+      // using XMLHttpRequest 
+
+      // this api link from jsonplaceholder website
+      // https://jsonplaceholder.typicode.com/comments
+
+      function callApi() {
+         alert("wait for 2 to 3 sec");
+         console.log("Using XMLHttpRequest")
+         const httpsRequest = new XMLHttpRequest();
+         // syntax - object.open('method', 'url', true) - true for asynchronous
+         httpsRequest.open('GET', "https://jsonplaceholder.typicode.com/comments", true);
+         httpsRequest.send();
+         httpsRequest.onload = () => {
+            if (httpsRequest.status == 200) {
+
+               console.log("\n\nThis API without json parsing : \n\n", httpsRequest.response);
+               const response = JSON.parse(httpsRequest.response);
+               // both are same, both are giving the same output 
+               // const response = JSON.parse(httpsRequest.responseText); 
+               console.log("\n\nThis API with json parsing : \n\n", response);
+
+               // here we have printed data on page 
+               for (let i = 0; i < response.length; i++) {
+                  // we have create node 
+                  let para = document.createElement("p");
+                  // here we just pass data of array as text while creating textNode 
+                  let str = document.createTextNode(response[i].body + " =====> " + response[i].email + " =====> " + response[i].id + " =====> " + response[i].name + " =====> " + response[i].postId);
+                  // here we have appended the data 
+                  para.appendChild(str);
+                  // and here we have appended that paragraph in body 
+                  document.body.append(para);
+               }
+            }
+            else {
+               console.log("error : ", error.message);
+            }
+         };
+      }
+   </script>
+</body>
+
+</html>
