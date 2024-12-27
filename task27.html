@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>api handling using axios in js</title>
+   <style>
+      button {
+         font-size: 1.2rem;
+         padding: 10px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <button type="button" onclick="callAPi()">API call using axios in js</button>
+
+   <p id="data">
+
+   </p>
+
+   <!-- to use axios in js we require axios cdn link, you can search and take it from internet  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+
+      function callAPi() {
+
+         // this api link from jsonplaceholder website
+         // https://jsonplaceholder.typicode.com/comments
+
+         // axios.get() also send promise, so to handle it we have used the then catch block 
+         // get is for catch or access data, you can use request() method also instead of get
+         axios.get("https://jsonplaceholder.typicode.com/comments").then((response) => {
+
+            console.log(response.data);
+            let a = parseInt(prompt("Enter index : "));
+            let data = document.getElementById("data");
+
+            // here we giving [a - 1] because api index starts from 0 that's why, when we input 1 it take as 0 like that 
+            let str = ` <b>Id : </b> ${response.data[a - 1].id} <br> <b>Post Id : </b> ${response.data[a - 1].postId} <br> <b>Name : </b> ${response.data[a - 1].name} <br> <b>Email : </b> ${response.data[a - 1].email} <br> <b>Body : </b> ${response.data[a - 1].body}`;
+
+            // here we use innerHTML because it should not print as it is tag should convert into styling text 
+            data.innerHTML = str;
+
+         }).catch((error) => {
+            console.log("Error got : ", error);
+         });
+      }
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>api handling using jQuery ajax program</title>
+   <style>
+      button {
+         font-size: 1.2rem;
+         padding: 10px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <button type="button" onclick="callApi()">API call using ajax program</button>
+
+   <p id="data">
+
+   </p>
+
+   <!-- to run ajax program we require jQuery cdn link you can search it on internet  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+      // this api link from jsonplaceholder website
+      // https://jsonplaceholder.typicode.com/comments
+      function callApi() {
+         $.ajax(
+            {
+               type: 'GET',
+               url: "https://jsonplaceholder.typicode.com/comments",
+               success: (response) => {
+                  let a = parseInt(prompt("Enter index : "));
+                  console.log(response);
+                  let str = `<b>Id : </b> ${response[a - 1].id} <br> <b>Post Id : </b> ${response[a - 1].postId} <br><b>Name : </b> ${response[a - 1].name} <br><b>Email : </b> ${response[a - 1].email} <br><b>Body : </b> ${response[a - 1].body}`;
+
+                  // directly pass the string to innerHTML without use of variable 
+                  document.getElementById("data").innerHTML = str;
+               },
+               error: (error) => {
+                  console.log(error);
+               }
+            }
+         )
+      }
+   </script>
+</body>
+
+</html>
